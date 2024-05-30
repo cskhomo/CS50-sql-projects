@@ -19,4 +19,5 @@ def convert(time):
     hours_passed = float(hours) + float(minutes)/60
     return hours_passed
 
-main()
+if __name__ == "__main__":
+    main()
