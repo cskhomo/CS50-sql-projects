@@ -3,8 +3,7 @@ def main():
     print(convert(statement))
 
 def convert(statement):
-    face_translation = str.maketrans({":)":"🙂", ":(":"🙁"})
-    emoji_statement = statement.translate(face_translation)
+    emoji_statement = statement.replace(":)","🙂").replace(":(","🙁")
     return emoji_statement
 
 main()
