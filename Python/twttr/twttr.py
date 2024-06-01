@@ -2,7 +2,6 @@ def main():
 
     twttr()
 
-
 def twttr():
 
     message = input("Input: ")
@@ -17,4 +16,3 @@ def twttr():
 
 
 main()
-de tw
