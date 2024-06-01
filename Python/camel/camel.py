@@ -1,4 +1,4 @@
-def main()
+def main():
     camel()
 
 def camel():
