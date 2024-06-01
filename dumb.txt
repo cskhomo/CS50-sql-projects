@@ -1,0 +1,375 @@
+def main():
+    percentage = getPercentage()
+    getFuel(percentage)
+
+def getPercentage():
+
+    while True:
+        fraction = input("Fraction: ")
+
+        if '/' in fraction:
+            x, y = fraction.split('/')
+
+        else: continue
+
+        try:
+            x = int(x)
+            y = int(y)
+
+        except (ValueError, ZeroDivisionError):
+            continue
+
+        else:
+            if x > y: continue
+
+            else : return int(round((x/y*100)))
+
+def getFuel(percentage):
+
+    if percentage <= 1:
+        print("E")
+
+    elif percentage >= 99:
+        print("F")
+
+    else:
+        print(f"{percentage}%")
+
+main()
+
+
+
+
+
+implement a program that prompts the user for the name of a variable in camel case and outputs the corresponding name in snake case. Assume that the user’s input will indeed be in camel case
+
+def main()
+    camel()
+
+def camel():
+
+    camel_case = input("camelCase: ")
+    snake_case = str()
+
+    for char in camel_case:
+
+        if char.islower():
+            snake_case += char
+
+        else:
+            snake_case += "_" + char.lower()
+
+    print(f"snake_case: {snake_case}")
+
+main()
+
+
+
+In a file called coke.py, implement a program that prompts the user to insert a coin, one at a time, each time informing the user of the amount due. Once the user has inputted at least 50 cents, output how many cents in change the user is owed. Assume that the user will only input integers, and ignore any integer that isn’t an accepted denomination.
+
+only accepts coins in these denominations: 25 cents, 10 cents, and 5 cents.
+
+def main():
+
+    coke()
+
+def coke():
+
+    due = 50
+
+    while (due > 0):
+
+        print(f"Amount Due: {due}")
+        coin = int(input("Insert Coin: "))
+
+        match coin:
+
+            case 5 | 10 | 25:
+                due -= coin
+
+    print(f"Change Owed: {-due}")
+
+main()
+
+
+
+implement a program that prompts the user for a str of text and then outputs that same text but with all vowels (A, E, I, O, and U) omitted, whether inputted in uppercase or lowercase.
+
+def main():
+
+    twttr()
+
+
+def twttr():
+
+    message = input("Input: ")
+    vowels = ["a", "e", "i", "o", "u"]
+    tweet = str()
+
+    for alpha in message:
+        if alpha.lower() not it vowels:
+            tweet += alpha
+
+    print(f"Output: {tweet}")
+
+
+main()
+
+
+
+implement a program that prompts consumers users to input a fruit (case-insensitively) and then outputs the number of calories in one portion of that fruit, per the FDA’s poster for fruits, which is also available as text. Capitalization aside, assume that users will input fruits exactly as written in the poster (e.g., strawberries, not strawberry). Ignore any input that isn’t a fruit.
+
+
+
+def main():
+
+    fruits = {
+              "apple" : "130", "avocado" : "50", "banana" : "110",
+              "cantaloupe" : "50",  "grapefruit" : "60", "grapes" : "90",
+              "honeydew melon" : "50", "kiwifruit" : "90","lemon" : "15",
+              "lime" : "20", "nectarine" : "60", "orange" : "80", "peach" : "60",
+              "pear" : "100", "pineapple" : "50", "plums" : "70", "strawberries" : "50",
+              "sweet cherries" : "100", "tangerine" : "50", "watermelon" : "80"
+            }
+
+    getCal(fruits, "Item: ")
+
+def getCal(dict, prompt):
+
+    fruit = input(prompt).lower()
+
+    if fruit in dict:
+        print(f"Calories: {dict[fruit]}")
+
+main()
+
+
+
+implement a program that prompts the user for a vanity plate and then output Valid if meets all of the requirements or Invalid if it does not. Assume that any letters in the user’s input will be uppercase. Structure your program per the below, wherein is_valid returns True if s meets all requirements and False if it does not. Assume that s will be a str
+
+“All vanity plates must start with at least two letters.”
+“… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”
+“Numbers cannot be used in the middle of a plate; they must come at the end. For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable. The first number used cannot be a ‘0’.”
+“No periods, spaces, or punctuation marks are allowed.”
+
+def main():
+
+    plate = getPlate("Plate : ")
+
+    if is_valid(plate):
+        print("Valid")
+
+    else: print("Invalid")
+
+def getPlate(prompt):
+    return input(prompt)
+
+def is_valid(s):
+
+    Bool = False
+
+    if 2 <= len(s) <= 6: # Between 2 and 6 characters
+
+        if s[:2].isalpha(): # Start with 2 letters
+
+            if s.isalnum(): # Has no symbols
+
+                Bool = True
+
+                for c in s:
+
+                    try: i = int(c)
+
+                    except: pass
+
+                    else:
+
+                        if c.isnumeric():
+                            if s[s.find(c):].isnumeric(): # Numbers at the end
+                                Bool = True
+                            else:
+                                Bool = False
+                                break
+
+                            if i == 0:  # No zero start
+                                if s[s.find(c)-1].isnumeric():
+                                    Bool = True
+
+                                else:
+                                    Bool = False
+                                    break
+    return Bool
+
+main()
+
+
+
+implement a program that prompts the user for a fraction, formatted as X/Y, wherein each of X and Y is an integer, and then outputs, as a percentage rounded to the nearest integer, how much fuel is in the tank. If, though, 1% or less remains, output E instead to indicate that the tank is essentially empty. And if 99% or more remains, output F instead to indicate that the tank is essentially full.
+
+If, though, X or Y is not an integer, X is greater than Y, or Y is 0, instead prompt the user again. (It is not necessary for Y to be 4.) Be sure to catch any exceptions like
+
+def main():
+    percentage = getPercentage("Fraction: ")
+    getFuel(percentage)
+
+def getPercentage(prompt):
+
+    while True:
+        fraction = input(prompt)
+
+        if '/' in fraction:
+            x, y = fraction.split('/')
+
+        else: continue
+
+        try:
+            x = int(x)
+            y = int(y)
+
+        except (ValueError, ZeroDivisionError):
+            continue
+
+        else:
+            if x > y: continue
+
+            else : return int(round((x/y*100)))
+
+def getFuel(percentage):
+
+    if percentage <= 1:
+        print("E")
+
+    elif percentage >= 99:
+        print("F")
+
+    else:
+        print(f"{percentage}%")
+
+main()
+
+
+
+implement a program that enables a user to place an order, prompting them for items, one per line, until the user inputs control-d (which is a common way of ending one’s input to a program). After each inputted item, display the total cost of all items inputted thus far, prefixed with a dollar sign ($) and formatted to two decimal places. Treat the user’s input case insensitively. Ignore any input that isn’t an item. Assume that every item on the menu will be titlecased.
+
+def main():
+
+    Total = 0
+
+    menu = {
+              "Baja Taco" : 4.00,
+              "Burrito" : 7.50,
+              "Bowl" : 8.50,
+              "Nachos" : 11.00,
+              "Quesadilla" : 8.50,
+              "Super Burrito" : 8.50,
+              "Super Quesadilla" : 9.50,
+              "Taco" : 3.00,
+              "Tortilla Salad" : 8.00,
+            }
+
+    while True:
+
+        try: food = input("Item: ").title()
+
+        except EOFError:
+            print()
+            break
+
+        else:
+            try: price = menu[food]
+
+            except KeyError: continue
+
+            else:
+                Total += price
+                print(f"Total: ${Total}0")
+main()
+
+
+
+implement a program that prompts the user for items, one per line, until the user inputs control-d (which is a common way of ending one’s input to a program). Then output the user’s grocery list in all uppercase, sorted alphabetically by item, prefixing each line with the number of times the user inputted that item. No need to pluralize the items. Treat the user’s input case-insensitively.
+
+def main():
+
+    groceryDict = dict()
+    groceryList = lst()
+
+    while True:
+
+        try: item = input().upper()
+
+        except EOFError: break
+
+        else:
+            if item in groceryDict:
+                groceryDict[item] += 1
+            else:
+                groceryDict[item] = 1
+                groceryList.append(item)
+
+    groceryList = sorted(groceryList)
+
+    for item in groceryList:
+        print(groceryDict[item], item)
+
+
+main()
+
+
+
+implement a program that prompts the user for a date, anno Domini, in month-day-year order, formatted like 9/8/1636 or September 8, 1636, wherein the month in the latter might be any of the values in the list below:
+
+[
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+]
+Then output that same date in YYYY-MM-DD format. If the user’s input is not a valid date in either format, prompt the user again. Assume that every month has no more than 31 days; no need to validate whether a month has 28, 29, 30, or 31 days.
+
+def main():
+
+    months = {
+                "January" : 1, "February" : 2, "March" : 3,
+                "April" : 4, "May" : 5, "June" : 6,
+                "July" : 7, "August" : 8, "September" : 9,
+                "October" : 10, "November" : 11, "December" : 12,
+            }
+
+    while True:
+
+        date = input("Date: ")
+
+        try:
+            m, d, y = date.split("/")
+            mm, dd, yyyy = int(m), int(d), int(y)
+
+        except:
+
+            try:
+                md, y = date.split(",")
+                m, d = md.split(" ")
+                mm, dd, yyyy = months[m], int(d), int(y)
+
+            except: continue
+
+            else:
+                if dd < 32:
+                    break
+
+        else:
+            if mm < 13 and dd < 32:
+                break
+
+    print(f"{yyyy}-{mm:02}-{dd:02}")
+
+
+main()
