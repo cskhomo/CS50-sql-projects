@@ -15,6 +15,7 @@ def coke():
 
             case 5 | 10 | 25:
                 due -= coin
+        else: continue
 
     print(f"Change Owed: {-due}")
 
