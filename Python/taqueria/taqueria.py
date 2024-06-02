@@ -30,5 +30,5 @@ def main():
 
             else:
                 Total += price
-                print(f"Total: ${Total}0")
+                print(f"Total: ${Total.2f}0")
 main()
