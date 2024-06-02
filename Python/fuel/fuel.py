@@ -19,7 +19,7 @@ def getPercentage():
             continue
 
         else:
-            if x > y: continue
+            if quotient > 1: continue
 
             else : return int(round((quotient*100)))
 
