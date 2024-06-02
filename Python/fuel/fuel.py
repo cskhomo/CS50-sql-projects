@@ -21,7 +21,7 @@ def getPercentage():
         else:
             if x > y: continue
 
-            else : return int(round((x/y*100)))
+            else : return int(round((quotient*100)))
 
 def getFuel(percentage):
 
