@@ -13,8 +13,7 @@ def getPercentage():
         else: continue
 
         try:
-            x = int(x)
-            y = int(y)
+           quotient = int(x) / int(y)
 
         except (ValueError, ZeroDivisionError):
             continue
