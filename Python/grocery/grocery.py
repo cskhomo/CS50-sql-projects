@@ -23,5 +23,4 @@ def main():
     for item in groceryList:
         print(groceryDict[item], item)
 
-
 main()
