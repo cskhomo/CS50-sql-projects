@@ -8,7 +8,8 @@ def main():
         try:
             item = input().upper()
 
-        except EOFError: break
+        except EOFError:
+            break
 
         else:
             if item in groceryDict:
