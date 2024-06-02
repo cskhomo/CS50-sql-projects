@@ -1,0 +1,38 @@
+def main():
+    percentage = getPercentage()
+    getFuel(percentage)
+
+def getPercentage():
+
+    while True:
+        fraction = input("Fraction: ")
+
+        if '/' in fraction:
+            x, y = fraction.split('/')
+
+        else: continue
+
+        try:
+            x = int(x)
+            y = int(y)
+
+        except (ValueError, ZeroDivisionError):
+            continue
+
+        else:
+            if x > y: continue
+
+            else : return int(round((x/y*100)))
+
+def getFuel(percentage):
+
+    if percentage <= 1:
+        print("E")
+
+    elif percentage >= 99:
+        print("F")
+
+    else:
+        print(f"{percentage}%")
+
+main()
