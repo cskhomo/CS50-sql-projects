@@ -1,7 +1,3 @@
-
-
-
-
 implement a program that:
 
 Prompts the user for a level,
