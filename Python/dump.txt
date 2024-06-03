@@ -1,0 +1,16 @@
+ implement a program that prompts the user for a str in English and then outputs the “emojized” version of that str, converting any codes (or aliases) therein to their corresponding emoji.
+
+from emoji import emojize
+
+def main():
+
+    message = input('Input: ')
+    print(f"Output: {text_to_emoji(message)}")
+
+def text_to_emoji(text):
+    return  emojize(text, language='alias')
+
+main()
+
+
+
