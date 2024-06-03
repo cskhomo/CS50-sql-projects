@@ -1,7 +1,3 @@
-
-
-
-
 implement a program that:
 
 Expects zero or two command-line arguments:
