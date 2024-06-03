@@ -1,34 +1,3 @@
-from pyfiglet import Figlet
-from random import choice
-from sys import argv
-from sys import exit
-
-
-def main():
-
-    figlet = Figlet()
-    figFonts = figlet.getFonts()
-
-    if len(argv) == 1:
-
-        figlet.setFont(font=choice(figFonts))
-        print(f"Output: \n{figlet.renderText(input('Input: '))}")
-        exit()
-
-    if len(argv) == 3:
-        if argv[1] == '-f' or argv[1] == '--font':
-            if argv[2] in figFonts:
-
-                figlet.setFont(font=argv[2])
-                print(f"Output: \n{figlet.renderText(input('Input: '))}")
-                exit()
-
-    exit("Invalid Argument(s)!!")
-
-main()
-
-
-
 implement a program that prompts the user for names, one per line, until the user inputs control-d. Assume that the user will input at least one name. Then bid adieu to those names, separating two names with one and, three names with two commas and one and, and
  names with
  commas and one and, as in the below:
