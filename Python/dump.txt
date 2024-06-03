@@ -54,4 +54,91 @@ main()
 
 
 
+implement a program that prompts the user for names, one per line, until the user inputs control-d. Assume that the user will input at least one name. Then bid adieu to those names, separating two names with one and, three names with two commas and one and, and
+ names with
+ commas and one and, as in the below:
+
+Adieu, adieu, to Liesl
+Adieu, adieu, to Liesl and Friedrich
+Adieu, adieu, to Liesl, Friedrich, and Louisa
+Adieu, adieu, to Liesl, Friedrich, Louisa, and Kurt
+Adieu, adieu, to Liesl, Friedrich, Louisa, Kurt, and Brigitta
+Adieu, adieu, to Liesl, Friedrich, Louisa, Kurt, Brigitta, and Marta
+Adieu, adieu, to Liesl, Friedrich, Louisa, Kurt, Brigitta, Marta, and Gretl
+
+import inflect
+
+def main():
+
+    engine = inflect.engine()
+
+    names = lst()
+
+    while True:
+
+        try: name = input("Name: ")
+
+        except (EOFError):
+            print()
+            break
+
+        else:
+            names.append(name)
+            continue
+
+    print(f"Adieu, adieu, to {engine.join(names)}")
+
+main()
+
+
+
+implement a program that:
+
+Prompts the user for a level,
+. If the user does not input a positive integer, the program should prompt again.
+Randomly generates an integer between 1 and
+, inclusive, using the random module.
+Prompts the user to guess that integer. If the guess is not a positive integer, the program should prompt the user again.
+If the guess is smaller than that integer, the program should output Too small! and prompt the user again.
+If the guess is larger than that integer, the program should output Too large! and prompt the user again.
+If the guess is the same as that integer, the program should output Just right! and exit.
+
+from random import randint
+
+def main():
+
+    while True:
+
+        try: target = randint(1, int(input("Level: ")))
+
+        except (ValueError): continue
+
+        else: break
+
+    while True:
+
+        try: guess = int(input("Guess: "))
+
+        except (ValueError): continue
+
+        else:
+
+            if guess > target:
+                print("Too large!")
+
+            elif guess < target:
+                print("Too small!")
+
+            else: break
+
+            continue
+
+    print("Just right!")
+
+    exit()
+
+main()
+
+
+
 
