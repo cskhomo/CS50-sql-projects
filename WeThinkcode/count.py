@@ -1,11 +1,7 @@
 def count_words(string):
 
-    # list_of_words = string.split(" ")
-    # number_of_words = len(list_of_words)
+    list_of_words = string.split()
+    print(list_of_words)
+    return len(list_of_words)
 
-    # print(list_of_words)
-    # return number_of_words
-
-    pass
-
-print(("me and     You").strip(" "))
+print(count_words("This Is A  Sentence"))
