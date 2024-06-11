@@ -8,4 +8,4 @@ def count_words(string):
 
     pass
 
-print(("me and     You").strip())
+print(("me and     You").strip(" "))
