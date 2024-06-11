@@ -6,4 +6,4 @@ def count_words(string):
     print(list_of_words)
     return number_of_words
 
-print(count_words("Me And You Is Us"))
+print(count_words("This sentence has  2 spaces"))
