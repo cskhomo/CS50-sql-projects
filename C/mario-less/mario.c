@@ -12,7 +12,11 @@ int main(void){
 
 void mario(int height){
 
-    for (int i=0; i<height; i++){
-        printf("#");
+    for (int i=0; i==height; i++){
+
+        for (int i=0; i==height; i++){
+
+            printf("#");
+        }
     }
 }
