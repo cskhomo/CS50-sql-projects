@@ -36,7 +36,7 @@ int prompt_user(void){
     do{
         height = get_int("Height: ");
     }
-    while (height < 0);
+    while (height < 1);
 
     return height;
 }
