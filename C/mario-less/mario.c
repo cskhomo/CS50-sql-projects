@@ -16,8 +16,8 @@ void mario(int height){
 
     for (int i=0; i<height; i++){
 
-        for (int j=height; j<1; j--){
-            printf("-");
+        for (int j=height; j>0; j--){
+            printf("*");
         }
 
         // for (int j=0; j==i+1; j++){
