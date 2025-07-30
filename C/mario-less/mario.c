@@ -11,11 +11,8 @@ int main(void){
     mario(height);
 }
 
+
 void mario(int height){
-
-    printf("%d\n",height);
-    return;
-
 
     for (int i=0; i<height; i++){
         printf("*");
@@ -28,6 +25,7 @@ void mario(int height){
         // }
     }
 }
+
 
 int prompt_user(void){
 
