@@ -20,8 +20,8 @@ void mario(int height){
 
             printf("#");
 
-            printf("\n");
-        // }
+        printf("\n");
+        }
     }
 }
 
