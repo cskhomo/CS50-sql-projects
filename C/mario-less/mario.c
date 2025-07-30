@@ -15,11 +15,10 @@ int main(void){
 void mario(int height){
 
     for (int i=0; i<height; i++){
-        printf("*");
 
-        // for (int j=0; j==i+1; j++){
+        for (int j=0; j==i+1; j++){
 
-            // printf("#");
+            printf("#");
 
             printf("\n");
         // }
