@@ -3,16 +3,11 @@
 
 
 void mario(int height);
+int prompt_user(void);
 
 int main(void){
 
-    int height;
-
-    do{
-        height = get_int("Height: ");
-    }
-    while (height < 0);
-
+    int height = prompt_user()
     mario(height);
 }
 
@@ -29,4 +24,14 @@ void mario(int height){
             printf("\n");
         // }
     }
+}
+
+int prompt_user(void){
+
+    int height;
+
+        do{
+            height = get_int("Height: ");
+        }
+        while (height < 0);
 }
