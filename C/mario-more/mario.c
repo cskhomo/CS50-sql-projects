@@ -24,6 +24,12 @@ void mario(int height){
             printf("#");
         }
 
+        printf("  ");
+
+        for (int k=0; k<i+1; k++){
+            printf("#");
+        }
+
          printf("\n");
     }
 }

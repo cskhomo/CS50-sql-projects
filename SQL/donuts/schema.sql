@@ -1,9 +1,11 @@
+
+
+
 CREATE TABLE "ingredients"(
     "id" INTEGER,
     "name" TEXT NOT NULL UNIQUE,
     "unit" TEXT NOT NULL,
-    "price" NUMERIC NOT NULL
-        CHECK("price" > '0'),
+    "price" NUMERIC NOT NULL CHECK("price" > '0'),
     PRIMARY KEY("id")
 );
 
@@ -11,8 +13,7 @@ CREATE TABLE "ingredients"(
 CREATE TABLE "donuts"(
     "id" INTEGER,
     "name" TEXT NOT NULL UNIQUE,
-    "gluten" INTEGER NOT NULL DEFAULT '1'
-        CHECK("gluten" IN ('0', '1')),
+    "gluten" INTEGER NOT NULL DEFAULT '1' CHECK("gluten" IN ('0', '1')),
     "price" NUMERIC NOT NULL
         CHECK("price" > '0'),
     PRIMARY KEY("id")
@@ -21,11 +22,9 @@ CREATE TABLE "donuts"(
 
 CREATE TABLE "recipes"(
     "donut_id" INTEGER,
-    "ingredient_id" INTEGER,    
-    FOREIGN KEY("donut_id")
-        REFERENCES "donuts"("id"),
-    FOREIGN KEY("ingredient_id") 
-        REFERENCES "ingredients"("id")
+    "ingredient_id" INTEGER,
+    FOREIGN KEY("donut_id") REFERENCES "donuts"("id"),
+    FOREIGN KEY("ingredient_id") REFERENCES "ingredients"("id")
 );
 
 
@@ -38,7 +37,7 @@ CREATE TABLE "orders"(
      FOREIGN KEY("customer_id")
         REFERENCES "customers"("id"),
     FOREIGN KEY("donut_id")
-        REFERENCES "donuts"("id")   
+        REFERENCES "donuts"("id")
 );
 
 
