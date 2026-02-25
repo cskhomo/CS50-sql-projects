@@ -7,7 +7,7 @@ This repository contains my problem set submissions from two HarvardX Online Cou
 
 All exercises are organized by week according to the official course structure starting at week 0.
 
-## SQL Submissions – Introduction to Databases with SQL
+## SQL Submissions
 
 - **[0.Querying](./SQL/0.Querying)**
 - **[1.Relating](./SQL/1.Relating)**
@@ -16,7 +16,7 @@ All exercises are organized by week according to the official course structure s
 - **[4.Viewing](./SQL/4.Viewing)**
 - **[5.Optimizing](./SQL/5.Optimizing)**
 
-## Python Submissions – Introduction to Programming with Python
+## Python Submissions
 
 - **[0.Functions-Variables](./Python/0.Functions-Variables)**
 - **[1.Conditionals](./Python/1.Conditionals)**
