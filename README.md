@@ -1,28 +1,15 @@
-# Harvard CS50 SQL & Python Submissions
+# CS50’s Introduction to Databases with SQL
 
-This repository contains my problem set submissions from two HarvardX Online Courses:
+This repository contains my submissions for **HarvardX CS50’s Introduction to Databases with SQL**.  
+It demonstrates practical experience with relational databases, SQL queries, and data modeling.
 
-- [**CS50's Intro to Databases with SQL**](https://cs50.harvard.edu/sql)
-- [**CS50's Intro to Programming with Python**](https://cs50.harvard.edu/python)
+## Highlights
 
-All exercises are organized by week according to the official course structure starting at week 0.
+- Designed normalized database schemas for real-world datasets
+- Wrote complex SQL queries using **JOINs, subqueries, and aggregations**
+- Created views and optimized queries with **indexes**
+- Practiced database design with constraints and triggers
 
-## SQL Submissions
+## Repository Structure
 
-- **[0.Querying](./SQL/0.Querying)**
-- **[1.Relating](./SQL/1.Relating)**
-- **[2.Designing](./SQL/2.Designing)**
-- **[3.Writing](./SQL/3.Writing)**
-- **[4.Viewing](./SQL/4.Viewing)**
-- **[5.Optimizing](./SQL/5.Optimizing)**
-
-## Python Submissions
-
-- **[0.Functions-Variables](./Python/0.Functions-Variables)**
-- **[1.Conditionals](./Python/1.Conditionals)**
-- **[2.Loops](./Python/2.Loops)**
-- **[3.Exceptions](./Python/3.Exceptions)**
-- **[4.Libraries](./Python/4.Libraries)**
-- **[5.Unit-Tests](./Python/5.Unit-Tests)**
-- **[6.File-IO](./Python/6.File-IO)**
-- **[7.Regular-Expressions](./Python/7.Regular-Expressions)**
+- **Week 0: Querying → Week 5: Optimizing** – Each folder contains weekly problem set solutions with SQL code.
