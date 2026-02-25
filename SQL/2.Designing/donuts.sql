@@ -1,6 +1,3 @@
-
-
-
 CREATE TABLE "ingredients"(
     "id" INTEGER,
     "name" TEXT NOT NULL UNIQUE,

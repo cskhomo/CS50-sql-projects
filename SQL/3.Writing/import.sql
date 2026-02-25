@@ -1,6 +1,5 @@
 .import --csv meteorites.csv  temp
 
-
 UPDATE "temp"
 SET "mass" = NULL
 WHERE "mass" = '';
