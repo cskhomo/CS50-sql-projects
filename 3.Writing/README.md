@@ -14,8 +14,8 @@ This folder contains my SQL solutions for Week 3 of CS50’s Introduction to Dat
 
 ## Problem Sets
 
-* Password Hack – Performed controlled updates and deletions in a live SQLite database, demonstrating careful modification of sensitive user data and audit logs
-* Meteorite Data – Imported and cleaned a CSV dataset of historical meteorite landings, transforming raw data into a normalized SQLite table suitable for analysis
+* **Password Hack** – Performed controlled updates and deletions in a live SQLite database, demonstrating careful modification of sensitive user data and audit logs
+* **Meteorite Data** – Imported and cleaned a CSV dataset of historical meteorite landings, transforming raw data into a normalized SQLite table suitable for analysis
 
 > [!NOTE]
 > The `.sql` files each contain a statements that solves a specific problem.
