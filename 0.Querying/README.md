@@ -4,11 +4,11 @@ This folder contains my SQL solutions for Week 0 of **CS50’s Introduction to D
 
 ## Key Skills Demonstrated
 
-- Writing **SELECT** queries to retrieve specific columns
-- Filtering data with **WHERE** conditions, including AND, OR, NOT, and NULL
-- Pattern matching using **LIKE**
-- Sorting results with **ORDER BY**, limiting output with **LIMIT** and **OFFSET**
-- Summarizing data using **aggregate functions** such as COUNT, ROUND, and DISTINCT
+- Writing `SELECT` queries to retrieve specific columns
+- Filtering data with `WHERE` conditions, including `AND`, `OR`, `NOT`, and `NULL`
+- Pattern matching using `LIKE`
+- Sorting results with `ORDER BY`, limiting output with `LIMIT` and `OFFSET`
+- Summarizing data using aggregate functions such as `COUNT()`, `ROUND()`, and `DISTINCT`
 
 ## Problem Sets
 
@@ -17,5 +17,5 @@ This folder contains my SQL solutions for Week 0 of **CS50’s Introduction to D
 - **Views** – Processed artwork data, leveraging filtering, ordering, and aggregate functions to evaluate attributes like brightness and contrast
 - **Players** – Explored historical sports data to extract player statistics and attributes
 
-> [!NOTE]
+> [!NOTE]  
 > The `.sql` files each contain a single query that solves a specific problem.
