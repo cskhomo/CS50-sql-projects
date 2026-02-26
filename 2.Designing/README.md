@@ -1,14 +1,14 @@
 # Week 2: Designing
 
-This folder contains my SQL solutions for Week 2 of CS50’s Introduction to Databases with SQL, focusing on designing normalized relational databases, implementing constraints, and modeling real-world entities.
+This folder contains my SQL solutions for Week 2 of **CS50’s Introduction to Databases with SQL**, focusing on designing normalized relational databases, implementing constraints, and modeling real-world entities.
 
 ## Key Skills Demonstrated
 
 - Designing normalized database schemas for real-world scenarios
-- Applying **PRIMARY KEY** and **FOREIGN KEY** constraints
-- Enforcing column rules using **CHECK**, **DEFAULT**, **NOT NULL**, and **UNIQUE**
-- Managing table structure with **ALTER TABLE** and **DROP TABLE**
-- Ensuring **data integrity** and efficient storage with **type affinities** and **constraints**
+- Applying `PRIMARY KEY` and `FOREIGN KEY` constraints
+- Enforcing column rules using `CHECK`, `DEFAULT`, `NOT NULL`, and `UNIQUE`
+- Managing table structure with `ALTER TABLE` and `DROP TABLE`
+- Ensuring data integrity and efficient storage with type affinities and constraints
 
 ## Problem Sets
 
@@ -16,5 +16,5 @@ This folder contains my SQL solutions for Week 2 of CS50’s Introduction to Dat
 - **Donut Shop** – Created a schema for Union Square Donuts, tracking donuts, ingredients, orders, and customers
 - **LinkedIn Users** – Built a database representing LinkedIn users, schools, companies, and professional connections
 
-> [!NOTE]
+> [!NOTE]  
 > The `.sql` files each contain a schema that solves a specific problem.
